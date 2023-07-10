@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NewsAPI</name>
+    </assembly>
+    <members>
+        <member name="M:NewsAPI.Controllers.AnnouncementsController.Get">
+            <summary>
+            returns all announcements
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementsController.getByCategoryId(System.String)">
+            <summary>
+            returns every announcement having categoryId
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewsAPI.Controllers.AnnouncementsController.GetById(System.Guid)">
+            <summary>
+            return an annoucement by its ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewsAPI.Controllers.CategoriesController.Get">
+            <summary>
+            This is a method to get categories list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewsAPI.Controllers.CategoriesController.Delete(System.Guid)">
+            <summary>
+            This is a method used to delete a category.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewsAPI.Controllers.CategoriesController.Create(NewsAPI.Models.Category)">
+            <summary>
+            This is a method used to post a category.
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
