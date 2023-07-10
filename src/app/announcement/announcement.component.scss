@@ -1,0 +1,33 @@
+.announcement-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 300px;
+  width: 200px;
+  border: 2px solid rgb(128, 0, 109);
+  border-radius: 25px;
+  padding: 30px;
+  margin: 20px;
+  background-color: #d19bb3;
+
+
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .message {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  .author {
+    align-self: flex-start;
+    font-weight: 600;
+  }
+}

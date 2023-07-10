@@ -1,0 +1,6 @@
+<div class="category-button">
+    <button mat-button color="basic" (click)="clickOnCategory(null)">Reset filters</button>
+    <div *ngFor="let category of categories">
+        <button (click)="clickOnCategory(category)" mat-button color="basic">{{category.name}} </button>
+    </div>
+</div>

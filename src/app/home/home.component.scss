@@ -1,0 +1,16 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .announcement-cont {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .announcements {
+            width: 90%;
+        }
+    }
+}

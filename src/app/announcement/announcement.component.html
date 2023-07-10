@@ -1,0 +1,12 @@
+<div class="announcement-container">
+    <p class="message">{{message}}</p>
+    <p class="title">{{title}}</p>
+    <p class="author">{{author | byAuthor}}</p>
+
+    <button mat-icon-button [routerLink]="['/edit', id]">
+        <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button (click)="deleteAnnouncement(id)">
+        <mat-icon>clear</mat-icon>
+    </button>
+</div>

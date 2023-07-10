@@ -1,0 +1,38 @@
+<form class="announcement-form" (ngSubmit)="addAnnouncement()" #announcementForm="ngForm">
+    <!--ngSubmit ca sa se dea un 'refresh' automat dupa ce adaug anuntul sa apara in lista de anunturi-->
+
+    <mat-form-field class="full-width">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" [(ngModel)]="title" name="title" required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Author</mat-label>
+        <input matInput placeholder="Author" [(ngModel)]="author" name="author" required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>imageUrl</mat-label>
+        <input matInput placeholder="imageUrl" [(ngModel)]="imageUrl" name="imageUrl" required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Leave a message:</mat-label>
+        <textarea matInput placeholder="Ex: The programming language." [(ngModel)]="message" name="message"></textarea>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Category:</mat-label>
+        <mat-select [(ngModel)]="selectedCategory" name="selectedCategory">
+            <mat-option *ngFor="let categ of categories" [value]="categ.id">
+                {{categ.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div>
+        <button mat-button color="basic" type="submit" [disabled]="!announcementForm.form.valid">Add</button>
+        <button mat-button color="basic" [routerLink]="''">Cancel</button>
+    </div>
+</form>

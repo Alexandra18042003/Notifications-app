@@ -1,0 +1,13 @@
+<div class="app-container">
+    <app-categories (selectedCategoryEmitter)="filterAnnouncementBasedOnCategory($event)">
+    </app-categories>
+
+    <button mat-icon-button color="basic" aria-label="Add a new announcement" [routerLink]="'/add'">
+        <mat-icon>add</mat-icon>
+    </button>
+
+    <div class="announcement-cont">
+        <app-announcement class="announcements" *ngFor="let announc of filteredAnnouncements" [id]="announc.id"
+            [title]="announc.title" [author]="announc.author" [message]="announc.message" />
+    </div>
+</div>
